@@ -1,3 +1,71 @@
+:root {
+	--base-color: white;
+	--base-variant: #e8e9ed;
+	--text-color: black;
+}
+
+.darkmode {
+	--base-color: black;
+	--base-variant: #e8e9ed;
+	--text-color: white;
+}
+
 body {
-  background-color: white;
+	font-family: "Rubik";
+	margin: 0px;
+}
+
+.navbar {
+	background-color: var(--base-color);
+	position: fixed;
+	top: 0;
+	width: 100%;
+	transition: top 0.3s;
+	margin-bottom: 30px;
+}
+
+.navbar a {
+	float: left;
+	color: var(--text-color);
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+}
+
+.navbar-right {
+	float: right;
+	margin-right: 20px;
+}
+
+h2 {
+	padding: 15px 15px;
+	font-size: 30px;
+	margin-top: 50px;
+}
+
+#theme-switch {
+	height: 50px;
+	width: 50px;
+	padding: 0;
+	background-color: var(--base-color);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#theme-switch svg {
+	fill: var(--primary-color);
+}
+
+#theme-switch svg:last-child {
+	display: none;
+}
+
+.darkmode #theme-switch svg:first-child {
+	display: none;
+}
+
+.darkmode #theme-switch svg:last-child {
+	display: block;
 }

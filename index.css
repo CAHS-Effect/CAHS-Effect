@@ -141,6 +141,6 @@ p {
 
 .game-card-icon {
 	display: block;
-	width: 200px;
+	width: clamp(100px, 200px, 250px);
 	margin-right: 20px;
 }

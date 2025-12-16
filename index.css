@@ -118,7 +118,7 @@ header {
 	max-width: 800px;
 	margin: 30px auto;
 	padding: 0 20px;
-	border-bottom: 1px solid #ddd;
+	border-bottom: 1px solid var(--base-variant);
 }
 
 .article-container h2, .article-container h3 {

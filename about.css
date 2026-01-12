@@ -1,0 +1,146 @@
+:root {
+	--base-color: white;
+	--base-variant: #e8e9ed;
+	--text-color: black;
+	--text-variant: #68686a;
+}
+
+.darkmode {
+	--base-color: #121212;
+	--base-variant: #333;
+	--text-color: white;
+}
+
+body {
+	font-family: "Rubik";
+	margin: 0px;
+	background-color: var(--base-color);
+}
+
+.navbar {
+	background-color: var(--base-color);
+	position: fixed;
+	top: 0;
+	width: 100%;
+	transition: top 0.3s;
+	margin-bottom: 30px;
+	border-bottom: 2px solid var(--base-variant);
+}
+
+.navbar a,
+.navbar p {
+	margin: 0px;
+	float: left;
+	color: var(--text-color);
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 18px;
+}
+
+.navbar-center {
+	float: none;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.navbar-right {
+	float: right;
+	margin-right: 20px;
+}
+
+.hover-underline-animation {
+	display: inline-block;
+	position: relative;
+}
+
+.hover-underline-animation::after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	transform: scaleX(0);
+	height: 2px;
+	bottom: -2px;
+	left: 0;
+	background-color: var(--text-color);
+	transform-origin: bottom right;
+	transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+	transform: scaleX(1);
+	transform-origin: bottom left;
+}
+
+#theme-switch {
+	border: none;
+	height: 50px;
+	width: 50px;
+	padding: 0;
+	background-color: var(--base-color);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+
+#theme-switch svg {
+	fill: var(--text-color);
+}
+
+#theme-switch svg:last-child {
+	display: none;
+}
+
+.darkmode #theme-switch svg:first-child {
+	display: none;
+}
+
+.darkmode #theme-switch svg:last-child {
+	display: block;
+}
+
+header {
+	padding: 20px;
+	text-align: center;
+	border-bottom: 1px solid #ddd;
+}
+
+.cover-image {
+	width: 100%;
+	max-height: 400px;
+	object-fit: cover;
+}
+
+.section-container {
+	max-width: 800px;
+	margin: 30px auto;
+	padding: 0 20px;
+	border-bottom: 2px solid var(--base-variant);
+	overflow: auto;
+}
+
+.section-container h2, .section-container p {
+	color: var(--text-color);
+}
+
+.bio-container {
+	width: 50%;
+	margin: auto;
+}
+
+.bio-container:nth-of-type(odd) {
+	float: left;
+}
+
+.bio-container:nth-of-type(even) {
+	float: right;
+}
+
+.author {
+	font-style: italic;
+	color: var(--text-variant);
+	margin-top: 10px;
+}
